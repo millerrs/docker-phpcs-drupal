@@ -4,7 +4,7 @@ A PHP_CodeSniffer image for checking Drupal code compliance.
 ## Usage
 
 ```bash
-docker run -it --rm /path/to/code:/app millerrs/phpcs-drupal
+docker run -it --rm -v /path/to/code:/app millerrs/phpcs-drupal
 ```
 
 ## Usage in Jenkins Pipeline

@@ -8,6 +8,7 @@ RUN apk update && apk add --no-cache \
     curl \
     git \
     php7 \
+    php7-ctype \
     php7-iconv \
     php7-json \
     php7-mbstring \
@@ -16,6 +17,7 @@ RUN apk update && apk add --no-cache \
     php7-simplexml \
     php7-tokenizer \
     php7-xml \
+    php7-xmlwriter \
     php7-zlib \
     && curl --silent --show-error https://getcomposer.org/installer | php \
     && php composer.phar global require drupal/coder \

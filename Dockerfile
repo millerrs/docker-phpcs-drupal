@@ -4,7 +4,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV PATH /composer/vendor/bin:$PATH
 
-RUN apk update && apk add --no-cache \
+RUN apk add --no-cache \
     curl \
     git \
     php7 \

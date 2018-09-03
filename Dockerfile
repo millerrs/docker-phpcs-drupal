@@ -1,5 +1,6 @@
 FROM alpine:3.8
 
+ENV CODER_VERSION 8.2
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV PATH /composer/vendor/bin:$PATH
@@ -20,7 +21,7 @@ RUN apk add --no-cache \
     php7-xmlwriter \
     php7-zlib \
     && curl --silent --show-error https://getcomposer.org/installer | php \
-    && php composer.phar global require drupal/coder \
+    && php composer.phar global require drupal/coder:~${CODER_VERSION} \
     && phpcs --config-set installed_paths /composer/vendor/drupal/coder/coder_sniffer
 
 WORKDIR /app
